@@ -1,1 +1,172 @@
 /* You can add global styles to this file, and also import other style files */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+:root {
+    --font-familly: "Roboto", sans-serif;
+    --primary: #40739e;
+    --secondary: #192a56;
+    --accent: #40739e;
+    --lightgray: #7f8fa6;
+    --text-regular: #2f3542;
+}
+
+body {
+    font-family: var(--font-familly);
+    color: var(--text-regular);
+}
+
+//layout
+.container {
+    max-width: 1200px;
+    display: block;
+    margin: auto;
+    padding: 20px;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-justify-content {
+    justify-content: center;
+}
+
+.flex-justify-content-between {
+    justify-content: space-between;
+}
+
+.flex-align-item-center {
+    align-items: center;
+}
+
+.flex-fill {
+    flex: 1 1 auto;
+}
+
+//util
+.p-10 {
+    padding: 10px;
+}
+
+.p-20 {
+    padding: 20px;
+}
+
+.pr-10 {
+    padding-right: 10px;
+}
+
+.pl-10 {}
+
+.m-10 {
+    margin: 10px;
+}
+
+.m-20 {
+    margin: 20px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.flex-50 {
+    flex: 1 1 50%, ;
+}
+
+// theme
+.list-primary-action {
+    li {
+        &:hover {
+            background-color: var(--primary);
+            color: white;
+            font-weight: 500;
+            cursor: pointer;
+        }
+        transition: all 0.4sec
+    }
+}
+
+.list-primary {
+    li {
+        padding: 10px 15px;
+        border: 1px solid var(--lightgray);
+        border-top: 0;
+    }
+    li:first-child {
+        border-top: 1px solid var(--lightgray);
+        border-top-right-radius: 3px;
+        border-top-left-radius: 3px;
+    }
+    li:last-child {
+        border-bottom: 1px solid var(--lightgray);
+        border-bottom-right-radius: 3px;
+        border-bottom-left-radius: 3px;
+    }
+}
+
+.active {
+    background-color: var(--secondary);
+    color: white;
+}
+
+.btn {
+    padding: 10px 15px;
+    background-color: white;
+    border: 0;
+    border-radius: 3px;
+    font-weight: 700;
+    cursor: pointer;
+    &-primary {
+        background-color: var(--primary);
+        color: white;
+        &:hover {
+            background-color: var(--secondary);
+        }
+        transition: all 0.4s;
+    }
+}
+
+.badge {
+    background-color: var(--primary);
+    border-radius: 3px;
+    padding: 2px 5px;
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+//debug
+.d1 {
+    border: 1px solid red;
+}
+
+.d2 {
+    border: 1px solid green;
+}
