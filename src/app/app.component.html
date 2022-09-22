@@ -3,6 +3,10 @@
         <div class="d-flex flex-column form-group">
             <label>Nom</label>
             <input formControlName="nom" type="text">
+            <div *ngIf="form.get('nom')?.errors && form.get('nom')?.touched">
+                <p *ngIf="form.get('nom')?.errors?.['notMat']">Tu ne peut pas t'appeler comme sa!</p>
+
+            </div>
         </div>
         <div class="d-flex flex-column form-group">
             <label>Email</label>
@@ -14,7 +18,7 @@
         </div>
         <div class="d-flex flex-column form-group">
             <label>Confirmation</label>
-            <input formControlName="confirmation" type="password">
+            <input #confirmation type="password">
         </div>
         <button class="btn btn-primary">Valider</button>
     </form>
